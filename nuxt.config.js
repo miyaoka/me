@@ -1,5 +1,6 @@
 module.exports = {
   modules: ['@nuxtjs/markdownit'],
+  css: ['~/assets/css/reset.scss', '~/assets/css/base.scss'],
   /*
   ** Headers of the page
   */
