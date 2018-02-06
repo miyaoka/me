@@ -1,4 +1,7 @@
+const nodeExternals = require('webpack-node-externals')
+
 module.exports = {
+  plugins: ['~/plugins/vue-awesome'],
   modules: ['@nuxtjs/markdownit'],
   css: ['~/assets/css/reset.scss', '~/assets/css/base.scss'],
   /*
@@ -32,6 +35,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      if (ctx.isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vue-awesome/]
+          })
+        ]
       }
     }
   }
