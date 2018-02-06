@@ -24,11 +24,34 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'About miyaoka',
+    titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} - ` : '') + 'miyaoka',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'profile' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: `@miyaoka's profile`
+      },
+      {
+        property: 'og:title',
+        content: 'miyaoka',
+        hid: 'ogTitle'
+      },
+      { property: 'og:site_name', content: 'miyaoka' },
+      { property: 'og:url', content: 'https://miyaoka.github.io/', hid: 'ogUrl' },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:locale', content: 'ja_JP' },
+      {
+        property: 'og:description',
+        content: `@miyaoka's profile`,
+        hid: 'ogDesc'
+      },
+      {
+        property: 'og:image',
+        content: 'https://www.gravatar.com/avatar/2eacc94dafaac7ce726f49384568d83a?s=600',
+        hid: 'ogImage'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
