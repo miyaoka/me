@@ -2,5 +2,5 @@
 cd ./dist
 git init
 git add .
-git -c user.name=$GITHUB_USER_NAME -c user.email=$GITHUB_USER_EMAIL commit -m "Auto Deployment"
-git push -f -q https://$GITHUB_USER_NAME:$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_USER_NAME/$GITHUB_USER_NAME.github.io master
+git -c user.name=$CIRCLE_PROJECT_USERNAME -c user.email=$GITHUB_USER_EMAIL commit -m "Auto Deployment"
+git push -f -q https://$GITHUB_ACCESS_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_USERNAME.github.io master
