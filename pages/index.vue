@@ -71,6 +71,7 @@ $clr-sub: #3c4271;
   @include mq(tablet) {
     position: unset;
     width: auto;
+    padding: 1rem;
   }
 
   a {
@@ -90,6 +91,7 @@ $clr-sub: #3c4271;
 
   @include mq(tablet) {
     margin-left: auto;
+    padding: 1rem;
   }
 
   a {
