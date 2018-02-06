@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   plugins: ['~/plugins/vue-awesome'],
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', ['@nuxtjs/google-analytics', { id: 'UA-3536169-19' }]],
   css: ['~/assets/css/reset.scss', '~/assets/css/base.scss'],
   /*
   ** Headers of the page
