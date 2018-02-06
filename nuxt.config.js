@@ -1,6 +1,22 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      [
+        'markdown-it-link-attributes',
+        {
+          attrs: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }
+      ]
+    ]
+  },
   plugins: ['~/plugins/vue-awesome'],
   modules: ['@nuxtjs/markdownit'],
   css: ['~/assets/css/reset.scss', '~/assets/css/base.scss'],
