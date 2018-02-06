@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         property: 'og:image',
-        content: 'https://www.gravatar.com/avatar/2eacc94dafaac7ce726f49384568d83a?s=600',
+        content: 'https://pbs.twimg.com/media/DHQakk0UIAAsIZ0.jpg',
         hid: 'ogImage'
       }
     ],
