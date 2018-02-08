@@ -1,6 +1,6 @@
 <template>
   <nav class="routes">
-    <nuxt-link to="/">読み物</nuxt-link>
+    <nuxt-link to="/" exact>書いた記事</nuxt-link>
     <nuxt-link to="/activity">活動</nuxt-link>
     <nuxt-link to="/works">つくってみた系</nuxt-link>
     <nuxt-link to="/keyboard">キーボード</nuxt-link>
@@ -19,11 +19,26 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/css/mixin/_mediaquery.scss';
+
+$clr-main: #e3cf7f;
+$clr-sub: #3c4271;
+
 .routes {
   margin: 1rem 0;
 
   & > * {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &.nuxt-link-active {
+      background: $clr-sub;
+      color: $clr-main;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 </style>
