@@ -19,7 +19,7 @@
 
 > Git はコマンドだけでなく構造も知ったほうが分かりやすいと思ったので解説
 
-<div class="speakerdeck-wrapper"><script async class="speakerdeck-embed" data-id="7aec15c4afef4e7d8fa2c36af3954830" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></div>
+<div class="speakerdeck-wrapper"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 83.9419%;"><iframe src="//speakerdeck.com/player/7aec15c4afef4e7d8fa2c36af3954830" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe></div></div>
 
 ### ErgoDox
 
