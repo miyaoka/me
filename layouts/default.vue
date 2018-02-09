@@ -1,10 +1,10 @@
 <template>
   <div class="app">
-    <div class="app-header">
-      <AppHeader/>
-    </div>
     <div class="app-routes">
       <AppRoutes/>
+    </div>
+    <div class="app-about" :class="{isRoot: $route.path === '/'}">
+      <AppAbout/>
     </div>
     <div class="app-content">
       <nuxt/>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import AppHeader from '~/components/AppHeader.vue'
+import AppAbout from '~/components/AppAbout.vue'
 import AppRoutes from '~/components/AppRoutes.vue'
 
 export default {
   components: {
-    AppHeader,
+    AppAbout,
     AppRoutes
   },
   data() {
@@ -44,11 +44,23 @@ $route-height: 3rem;
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-template-rows: $route-height 1fr;
-  grid-template-areas: 'header routes' 'header content';
+  grid-template-areas: 'about routes' 'about content';
   height: 100vh;
 
-  &-header {
-    grid-area: header;
+  @include mq(tablet) {
+    display: unset;
+    grid-template-areas: none;
+  }
+
+  &-about {
+    grid-area: about;
+
+    @include mq(tablet) {
+      padding-top: $route-height;
+      &:not(.isRoot) {
+        display: none;
+      }
+    }
   }
   &-routes {
     grid-area: routes;
@@ -56,7 +68,10 @@ $route-height: 3rem;
   &-content {
     grid-area: content;
     overflow: scroll;
-    padding-bottom: 5rem;
+    padding: 0 2rem 5rem;
+    @include mq(tablet) {
+      padding: $route-height 1rem 5rem;
+    }
   }
 }
 </style>
@@ -95,13 +110,8 @@ $route-height: 3rem;
 
   &-routes,
   &-content {
-    padding: 0 2rem;
     color: $clr-sub;
     background: $clr-main;
-
-    @include mq(tablet) {
-      padding: 1rem;
-    }
 
     a {
       color: $clr-sub;

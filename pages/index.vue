@@ -1,4 +1,4 @@
 <script>
-import article from '~/pages/article'
-export default article
+import contact from '~/pages/contact'
+export default contact
 </script>
