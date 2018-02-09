@@ -50,6 +50,7 @@ $route-height: 3rem;
   @include mq(tablet) {
     display: unset;
     grid-template-areas: none;
+    height: auto;
   }
 
   &-about {
@@ -67,10 +68,12 @@ $route-height: 3rem;
   }
   &-content {
     grid-area: content;
-    overflow: scroll;
+    overflow-y: auto;
     padding: 0 2rem 5rem;
     @include mq(tablet) {
       padding: $route-height 1rem 5rem;
+      margin: 0;
+      overflow: hidden;
     }
   }
 }
