@@ -18,8 +18,19 @@ module.exports = {
     ]
   },
   plugins: ['~/plugins/vue-awesome'],
-  modules: ['@nuxtjs/markdownit', ['@nuxtjs/google-analytics', { id: 'UA-3536169-19' }]],
-  css: ['~/assets/css/reset.scss', '~/assets/css/base.scss'],
+  modules: [
+    '@nuxtjs/markdownit',
+    ['@nuxtjs/google-analytics', { id: 'UA-3536169-19' }],
+    [
+      'nuxt-sass-resources-loader',
+      [
+        'node_modules/bootstrap/scss/_functions.scss',
+        'node_modules/bootstrap/scss/_variables.scss',
+        'node_modules/bootstrap/scss/_mixins.scss'
+      ]
+    ]
+  ],
+  css: ['node_modules/bootstrap/scss/_reboot.scss'],
   /*
   ** Headers of the page
   */

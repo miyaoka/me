@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/css/mixin/_mediaquery.scss';
-
 $route-height: 3rem;
 
 .app {
@@ -47,7 +45,7 @@ $route-height: 3rem;
   grid-template-areas: 'about routes' 'about content';
   height: 100vh;
 
-  @include mq(tablet) {
+  @include media-breakpoint-down(md) {
     display: unset;
     grid-template-areas: none;
     height: auto;
@@ -56,7 +54,7 @@ $route-height: 3rem;
   &-about {
     grid-area: about;
 
-    @include mq(tablet) {
+    @include media-breakpoint-down(md) {
       padding-top: $route-height;
       &:not(.isRoot) {
         display: none;
@@ -70,7 +68,7 @@ $route-height: 3rem;
     grid-area: content;
     overflow-y: auto;
     padding: 0 2rem 5rem;
-    @include mq(tablet) {
+    @include media-breakpoint-down(md) {
       padding: $route-height 1rem 5rem;
       margin: 0;
       overflow: hidden;
@@ -80,8 +78,6 @@ $route-height: 3rem;
 </style>
 
 <style lang="scss">
-@import '~assets/css/mixin/_mediaquery.scss';
-
 .app {
   h1,
   h2 {
@@ -108,21 +104,12 @@ $route-height: 3rem;
     font-size: 0.9rem;
   }
 
-  $clr-main: #e3cf7f;
-  $clr-sub: #3c4271;
-
   &-routes,
   &-content {
-    color: $clr-sub;
-    background: $clr-main;
-
     a {
-      color: $clr-sub;
       text-decoration: underline;
 
       &:hover {
-        color: $clr-main;
-        background: $clr-sub;
       }
     }
     h2 {
@@ -131,8 +118,6 @@ $route-height: 3rem;
     h3 {
       &,
       & a {
-        color: $clr-main;
-        background: $clr-sub;
       }
       padding: 0.1rem 2rem;
       margin: 2rem -2rem 1rem;

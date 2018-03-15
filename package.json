@@ -15,9 +15,11 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/markdownit": "^1.2.0",
+    "ajv": "^6.2.1",
     "bootstrap": "^4.0.0",
     "markdown-it-link-attributes": "^2.0.0",
     "nuxt": "^1.4.0",
+    "nuxt-sass-resources-loader": "^1.2.0",
     "vue-awesome": "^2.3.5"
   },
   "devDependencies": {
@@ -28,7 +30,7 @@
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7"

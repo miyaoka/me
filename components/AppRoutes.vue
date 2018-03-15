@@ -31,11 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/css/mixin/_mediaquery.scss';
-
-$clr-main: #e3cf7f;
-$clr-sub: #3c4271;
-
 .routes {
   margin: 1rem 0;
 
@@ -45,8 +40,6 @@ $clr-sub: #3c4271;
     border-radius: 0.5rem;
 
     &.nuxt-link-active {
-      background: $clr-sub;
-      color: $clr-main;
       text-decoration: none;
     }
     &:hover {
@@ -54,7 +47,7 @@ $clr-sub: #3c4271;
     }
   }
 
-  @include mq(tablet) {
+  @include media-breakpoint-down(md) {
     display: none;
 
     .isMenuShown & {
@@ -69,8 +62,6 @@ $clr-sub: #3c4271;
       left: 0;
 
       a {
-        color: $clr-main;
-
         display: block;
       }
     }
@@ -78,8 +69,7 @@ $clr-sub: #3c4271;
 }
 .routesContainer {
   padding: 0 2rem;
-  @include mq(tablet) {
-    background: $clr-sub;
+  @include media-breakpoint-down(md) {
     padding: 0.5rem;
     position: fixed;
     width: 100%;
@@ -93,10 +83,9 @@ $clr-sub: #3c4271;
   .bars {
     background: none;
     border: none;
-    color: $clr-main;
     cursor: pointer;
   }
-  @include mq(tablet) {
+  @include media-breakpoint-down(md) {
     display: block;
   }
 }

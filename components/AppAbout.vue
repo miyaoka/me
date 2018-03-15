@@ -19,34 +19,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '~assets/css/mixin/_mediaquery.scss';
-
+<style lang="scss" scoped>
 $side-width: 400px;
-$clr-main: #e3cf7f;
-$clr-sub: #3c4271;
 
 .header {
   // position: fixed;
   width: $side-width;
   padding: 2rem;
-  color: $clr-main;
   overflow: auto;
   height: 100%;
 
-  @include mq(tablet) {
+  @include media-breakpoint-down(md) {
     position: unset;
     width: auto;
     padding: 1rem;
-  }
-
-  a {
-    color: $clr-main;
-    text-decoration: underline;
-    &:hover {
-      color: $clr-sub;
-      background: $clr-main;
-    }
   }
 }
 </style>
