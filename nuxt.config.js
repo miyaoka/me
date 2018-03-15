@@ -26,11 +26,12 @@ module.exports = {
       [
         'node_modules/bootstrap/scss/_functions.scss',
         'node_modules/bootstrap/scss/_variables.scss',
-        'node_modules/bootstrap/scss/_mixins.scss'
+        'node_modules/bootstrap/scss/_mixins.scss',
+        'assets/css/_vars.scss'
       ]
     ]
   ],
-  css: ['node_modules/bootstrap/scss/_reboot.scss'],
+  css: ['node_modules/bootstrap/scss/_reboot.scss', 'assets/css/base.scss'],
   /*
   ** Headers of the page
   */

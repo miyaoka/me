@@ -108,17 +108,11 @@ $route-height: 3rem;
   &-content {
     a {
       text-decoration: underline;
-
-      &:hover {
-      }
     }
     h2 {
     }
 
     h3 {
-      &,
-      & a {
-      }
       padding: 0.1rem 2rem;
       margin: 2rem -2rem 1rem;
     }
