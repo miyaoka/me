@@ -80,8 +80,8 @@ h6 {
 
 body {
   color: $clr-b;
-  background: $clr-w;
-  transform: skew(0deg, -5deg);
+  background: $clr-w-ll;
+  transform: skew(0deg, -3deg);
 }
 a {
   color: $clr-b-dd;
@@ -96,10 +96,10 @@ a {
 img,
 iframe,
 .twitter-tweet-rendered {
-  box-shadow: hsla(0, 0%, 0%, 0.1) -10px 20px 10px -2px;
+  box-shadow: hsla(0, 0%, 0%, 0.15) -20px 30px 20px -10px;
   border-radius: 0.5rem;
-  border: 4px solid;
-  border-color: $clr-b-ll $clr-b-ll $clr-b $clr-b;
+  border: 2px solid;
+  border-color: $clr-w $clr-w $clr-b-ll $clr-b-ll;
   overflow: hidden;
   margin-bottom: 1.5rem !important;
 }
