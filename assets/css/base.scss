@@ -73,33 +73,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400;
-  font-family: Georgia, '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN',
-    'ＭＳ Ｐ明朝', 'ＭＳ 明朝', serif;
+  font-weight: 700;
+  color: $clr-b-d;
 }
 
 body {
   color: $clr-b;
   background: $clr-w-ll;
-  transform: skew(0deg, -3deg);
+  transform: skew(0deg, -4deg);
 }
 a {
-  color: $clr-b-dd;
-  display: inline-block;
+  color: $clr-b-d;
+  text-decoration: underline;
 
   &:hover {
     color: $clr-b-dd;
     background: $clr-w-dd;
     text-decoration: none;
   }
-}
-img,
-iframe,
-.twitter-tweet-rendered {
-  box-shadow: hsla(0, 0%, 0%, 0.15) -20px 30px 20px -10px;
-  border-radius: 0.5rem;
-  border: 2px solid;
-  border-color: $clr-w $clr-w $clr-b-ll $clr-b-ll;
-  overflow: hidden;
-  margin-bottom: 1.5rem !important;
 }

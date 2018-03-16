@@ -1,0 +1,8 @@
+# Contentful > Space settings > API Keys
+
+export CTF_SPACE_ID=
+export CTF_CDA_TOKEN=
+export CTF_CPA_TOKEN=
+
+# Contentful > Content model
+export CTF_BLOG_POST_TYPE_ID=

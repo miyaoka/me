@@ -1,7 +1,39 @@
 const nodeExternals = require('webpack-node-externals')
+const contentful = require('contentful')
 
 module.exports = {
+  env: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_TOKEN: process.env.CTF_CDA_TOKEN,
+    CTF_CPA_TOKEN: process.env.CTF_CPA_TOKEN,
+    CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
+  },
+  generate: {
+    async routes() {
+      try {
+        const entries = await contentful
+          .createClient({
+            space: process.env.CTF_SPACE_ID,
+            accessToken: process.env.CTF_CDA_TOKEN
+          })
+          .getEntries({
+            content_type: process.env.CTF_BLOG_POST_TYPE_ID,
+            order: '-fields.date',
+            limit: 100,
+            skip: 0
+          })
+        return entries.items.map((post) => ({
+          route: `posts/${post.sys.id}`,
+          payload: post
+        }))
+      } catch (err) {
+        console.error(err)
+      }
+    }
+  },
   markdownit: {
+    injected: true,
+    html: true,
     preset: 'default',
     linkify: true,
     breaks: false,
@@ -17,7 +49,7 @@ module.exports = {
       ]
     ]
   },
-  plugins: ['~/plugins/vue-awesome'],
+  plugins: ['~/plugins/vue-awesome', '~/plugins/contentful'],
   modules: [
     '@nuxtjs/markdownit',
     ['@nuxtjs/google-analytics', { id: 'UA-3536169-19' }],
@@ -36,7 +68,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} - ` : '') + 'miyaoka',
+    titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} - ` : '') + '@miyaoka',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -79,6 +111,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['contentful'],
     /*
     ** Run ESLint on save
     */
