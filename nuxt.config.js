@@ -49,8 +49,13 @@ module.exports = {
       ]
     ]
   },
+  manifest: {
+    name: '@miyaoka',
+    lang: 'ja'
+  },
   plugins: ['~/plugins/vue-awesome', '~/plugins/contentful'],
   modules: [
+    '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
     ['@nuxtjs/google-analytics', { id: 'UA-3536169-19' }],
     [
