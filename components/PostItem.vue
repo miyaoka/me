@@ -7,20 +7,24 @@
       }
     }">{{fields.title}}</nuxt-link></h2>
 
-    <div
-      v-html="md(fields.body)"
-      class="body"
-      v-twitter-widgets
-    />
+    <lazy-component>
+      <div
+        v-html="md(fields.body)"
+        class="body"
+        v-twitter-widgets
+      />
+    </lazy-component>
+
+    <div v-if="fields.article">
+      <h3>Article</h3>
+      <lazy-component>
+        <div v-html="md(fields.article)" v-twitter-widgets/>
+      </lazy-component>
+    </div>
 
     <div v-if="fields.site">
       <h3>Site</h3>
       <div v-html="md(fields.site)"/>
-    </div>
-
-    <div v-if="fields.article">
-      <h3>Article</h3>
-      <div v-html="md(fields.article)" v-twitter-widgets/>
     </div>
 
     <div v-if="fields.repository">

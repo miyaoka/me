@@ -53,7 +53,7 @@ module.exports = {
     name: '@miyaoka',
     lang: 'ja'
   },
-  plugins: ['~/plugins/vue-awesome', '~/plugins/contentful'],
+  plugins: ['~/plugins/vue-awesome', '~/plugins/contentful', '~/plugins/vue-lazyload'],
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
