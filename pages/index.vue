@@ -24,6 +24,11 @@ export default {
   data() {
     return {}
   },
+  head() {
+    return {
+      title: null
+    }
+  },
   async asyncData({ app, store, env }) {
     try {
       const postList = await app.$contentful.getEntries({
