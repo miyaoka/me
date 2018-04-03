@@ -8,23 +8,23 @@
     }">{{fields.title}}</nuxt-link></h2>
 
     <div
-      v-html="$md.render(fields.body)"
+      v-html="md(fields.body)"
       class="body"
     />
 
     <div v-if="fields.site">
       <h3>Site</h3>
-      <div v-html="$md.render(fields.site)"/>
+      <div v-html="md(fields.site)"/>
     </div>
 
     <div v-if="fields.article">
       <h3>Article</h3>
-      <div v-html="$md.render(fields.article)"/>
+      <div v-html="md(fields.article)"/>
     </div>
 
     <div v-if="fields.repository">
       <h3>Repository</h3>
-      <div v-html="$md.render(fields.repository)"/>
+      <div v-html="md(fields.repository)"/>
     </div>
 
     <!-- <div>date: {{fields.date | date}}</div>
@@ -54,7 +54,12 @@ export default {
   },
   computed: {
     fields() {
-      return this.post.fields
+      return this.post.fields || {}
+    }
+  },
+  methods: {
+    md(text) {
+      return text ? this.$md.render(text) : ''
     }
   }
 }
