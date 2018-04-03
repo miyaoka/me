@@ -3,12 +3,17 @@ node_modules
 
 # logs
 npm-debug.log
+yarn-error.log
 
-# Nuxt build
+# build
 .nuxt
 
-# Nuxt generate
+# generate
 dist
 
+# env
+.env
 .envrc
+
+# sw
 sw.*
