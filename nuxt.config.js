@@ -66,7 +66,8 @@ module.exports = {
         'node_modules/bootstrap/scss/_mixins.scss',
         'assets/css/_vars.scss'
       ]
-    ]
+    ],
+    '@miyaoka/nuxt-twitter-widgets-module'
   ],
   css: ['node_modules/bootstrap/scss/_reboot.scss', 'assets/css/base.scss'],
   /*

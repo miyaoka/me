@@ -10,6 +10,7 @@
     <div
       v-html="md(fields.body)"
       class="body"
+      v-twitter-widgets
     />
 
     <div v-if="fields.site">
@@ -19,7 +20,7 @@
 
     <div v-if="fields.article">
       <h3>Article</h3>
-      <div v-html="md(fields.article)"/>
+      <div v-html="md(fields.article)" v-twitter-widgets/>
     </div>
 
     <div v-if="fields.repository">

@@ -52,18 +52,6 @@ export default {
     } catch (err) {
       console.error(err)
     }
-  },
-  mounted() {
-    this.loadTwitterWidget()
-  },
-  updated() {
-    this.loadTwitterWidget()
-  },
-  methods: {
-    loadTwitterWidget() {
-      // Reload twitter widget for this episode when already loaded on root
-      if (window['twttr']) window['twttr'].widgets.load(this.$refs.content)
-    }
   }
 }
 </script>

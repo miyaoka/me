@@ -7,9 +7,6 @@
       </div>
     </div>
     <app-footer class="footer"/>
-    <span v-if="mounted">
-      <script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </span>
   </div>
 </template>
 
@@ -21,14 +18,6 @@ export default {
   components: {
     AppHeader,
     AppFooter
-  },
-  data() {
-    return {
-      mounted: false
-    }
-  },
-  async mounted() {
-    this.mounted = true
   }
 }
 </script>
