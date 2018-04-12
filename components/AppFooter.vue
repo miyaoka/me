@@ -8,7 +8,8 @@
           target=“_blank”>
           <img
             src="/img/logo/github.png"
-            alt="Powered by GitHub">
+            alt="Powered by GitHub"
+          >
         </a>
 
         <a
@@ -17,7 +18,8 @@
           target=“_blank”>
           <img
             src="/img/logo/contentful.svg"
-            alt="Powered by Contentful"/>
+            alt="Powered by Contentful"
+          >
         </a>
 
       </nav>
@@ -40,13 +42,11 @@ footer {
   transform: translate(-50%, -50%);
 }
 .links {
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  grid-gap: 1rem;
+  display: flex;
   align-items: center;
   margin: 2rem auto;
-  width: 280px;
   img {
+    margin: 10px;
     width: 80px;
   }
 }
