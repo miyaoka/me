@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" :class="{ skew: $store.state.skew }">
     <div class="content-wrapper">
       <app-header/>
       <div class="content">
@@ -25,6 +25,9 @@ export default {
 <style lang="scss" scoped>
 $footer-height: 120px;
 
+.app.skew {
+  transform: skew(0deg, -5deg);
+}
 .content-wrapper {
   min-height: calc(100vh- #{$footer-height});
 }

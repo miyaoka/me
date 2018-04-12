@@ -1,13 +1,27 @@
 <template>
   <header class="header">
     <h1><nuxt-link to="/">@miyaoka</nuxt-link></h1>
+
+    <label>
+      <input
+        type="checkbox"
+        v-model="skew">
+      傾けない
+    </label>
   </header>
 </template>
 
 <script>
 export default {
-  data() {
-    return {}
+  computed: {
+    skew: {
+      get() {
+        return !this.$store.state.skew
+      },
+      set(val) {
+        this.$store.commit('skew', !val)
+      }
+    }
   }
 }
 </script>
