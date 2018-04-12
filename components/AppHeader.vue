@@ -1,7 +1,6 @@
 <template>
   <header class="header">
     <h1><nuxt-link to="/">@miyaoka</nuxt-link></h1>
-    <div></div>
   </header>
 </template>
 
